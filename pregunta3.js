@@ -2,8 +2,15 @@
 // Por ejemplo en: [4,3,4,5,1] el tercer mayor es 3
 // si la longitud del array es < 3 se debe retornar undefined
 
+function removeDuplicates(array) {
+    return array.filter((a, b) => array.indexOf(a) === b)
+  };
+
 const greater3 = nums => {
-    
+    arr = removeDuplicates(nums)
+    arr.sort()
+    arr.reverse()
+    return arr[2]
 }
 
 

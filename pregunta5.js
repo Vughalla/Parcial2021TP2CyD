@@ -20,3 +20,12 @@ const beers = [
     { name: 'Stolen Fruit', abv: 4.6, label: 'https://s3.amazonaws.com/brewerydbapi/beer/YGT30k/upload_uVCHP7-large.png', type: 'Wheat' },
 ];
 
+function actualizar(){
+  var newDom = "https://tecnoshare.sharepoint.com/sites/beer/"
+  beers.forEach(link => {
+    link.label = newDom + link.label.split("/")[5] + "/" + link.name.split(" ").join("%20") + ".png"
+  });
+}
+
+actualizar()
+console.log(beers)

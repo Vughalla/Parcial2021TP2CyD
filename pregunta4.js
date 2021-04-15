@@ -22,7 +22,9 @@
    * @param {*} inventors 
    */
   function addDiscoveries(inventor, discoveries, inventors){
-      
+      arr = inventors
+      arr.find(data => data.last == inventor)["discovers"] = discoveries
+      return arr
   }
 
   console.log(addDiscoveries('Einstein', 

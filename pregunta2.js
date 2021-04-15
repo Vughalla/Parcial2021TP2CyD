@@ -15,10 +15,17 @@
   }
 
 const sale = function (article, cant){
-  
+  var codigo = 500
+  if (inventory[article] >= cant){
+    inventory[article] = inventory[article] - cant
+    codigo = 200
+  }
+
+  return codigo
 }
 
 // TESTS (no modificar)
 console.log(sale('shoes',8) === 200 && inventory.shoes === 2);
 console.log(sale('shoes',3) === 500 && inventory.shoes === 2);
 console.log(sale('pants',5) === 200 && inventory.pants === 0);
+
